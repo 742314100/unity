@@ -5,6 +5,7 @@ using UnityEngine;
 public class my : MonoBehaviour {
 
     private bool upward = true;
+    private bool toRight = true;
 
 	// Use this for initialization
 	void Start () {
@@ -49,12 +50,20 @@ public class my : MonoBehaviour {
 
         //this.transform.Rotate(0,0,-angle);
 
-        int screenW = Screen.width;
+        //int screenW = Screen.width;
 
-        int screenH = Screen.height;
+        //int screenH = Screen.height;
 
-        Debug.Log("屏幕:"+screenW + "," + screenH);
+        //Debug.Log("屏幕:"+screenW + "," + screenH);
 
+        //Vector3 wordPos = transform.position;
+
+        //Vector3 screenPos = Camera.main.WorldToScreenPoint(wordPos);
+
+        //Debug.Log("屏幕坐标"+screenPos);
+
+
+        transform.eulerAngles = new Vector3(0,0,-90);
 
 
 	}
@@ -72,5 +81,21 @@ public class my : MonoBehaviour {
         //float step = 1.6f * Time.deltaTime;
 
         //transform.Translate(0,step,0,Space.Self);
+
+        Vector3 sp = Camera.main.WorldToScreenPoint(transform.position);
+        if(toRight && sp.x > Screen.width){
+            toRight = false;
+            transform.eulerAngles = new Vector3(0,0,90);
+        }
+        if (!toRight && sp.x < 0)
+        {
+            toRight = true;
+            transform.eulerAngles = new Vector3(0, 0, -90);
+        }
+
+        float step = 1.8f * Time.deltaTime;
+
+        transform.Translate(0,step,0,Space.Self);
+
 	}
 }
