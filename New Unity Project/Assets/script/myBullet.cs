@@ -13,6 +13,8 @@ public class myBullet : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        float step = 1.8f * Time.deltaTime;
+
+        transform.Translate(0, step, 0, Space.Self);
 	}
 }

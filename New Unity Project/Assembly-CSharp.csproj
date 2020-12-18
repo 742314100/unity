@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\script\Hello.cs" />
      <Compile Include="Assets\script\NewBehaviourScript.cs" />
+     <Compile Include="Assets\script\changeFace.cs" />
      <Compile Include="Assets\script\my.cs" />
      <Compile Include="Assets\script\myBullet.cs" />
      <Compile Include="Assets\script\role.cs" />
