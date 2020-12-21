@@ -15,5 +15,13 @@ public class Monster : MonoBehaviour {
 	void Update () {
         float dy = speed * Time.deltaTime;
         transform.Translate(0,-dy,0);
+
+        //怪物超出屏幕下边界，销毁改怪物
+        Vector3 sp = Camera.main.WorldToScreenPoint(transform.position);
+        if(sp.y <0 ){
+            Destroy(this.gameObject);
+        }
+
+
 	}
 }
