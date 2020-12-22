@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 0e8e6383fbdcb7d4c9c9d040f0824e5b
+timeCreated: 1608600880
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Jade2B
+  fontNames:
+  - Jade2B
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

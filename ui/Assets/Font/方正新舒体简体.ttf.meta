@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: c765009883d391c4588826b1b15b31c3
+timeCreated: 1608600880
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: FZNew ShuTi-S08S
+  fontNames:
+  - FZNew ShuTi-S08S
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
