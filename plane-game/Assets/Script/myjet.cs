@@ -8,8 +8,11 @@ public class myjet : MonoBehaviour {
 
     //定时
     private float interval = 0.4f; //每隔0.4秒发射一个子弹
-    private float count = 0; 
+    private float count = 0;
 
+
+    private bool isMouseDown = false;
+    private Vector3 lastMousePosition = Vector3.zero;
 
 	// Use this for initialization
 	void Start () {
@@ -43,6 +46,27 @@ public class myjet : MonoBehaviour {
         {
             transform.Translate(step,0,0);
         }
+
+        //手机触屏
+        if (Input.GetMouseButtonDown(0))
+        {
+            isMouseDown = true;
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            isMouseDown = false;
+            lastMousePosition = Vector3.zero;
+        }
+        if (isMouseDown)
+        {
+            if (lastMousePosition != Vector3.zero)
+            {
+                Vector3 offset = Camera.main.ScreenToWorldPoint(Input.mousePosition) - lastMousePosition;
+                transform.position += offset;
+            }
+            lastMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        }
+
 
 	}
 
