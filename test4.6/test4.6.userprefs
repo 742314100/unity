@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\uiTest.cs">
+    <Files>
+      <File FileName="Assets\Scripts\buttonClick.cs" Line="8" Column="32" />
+      <File FileName="Assets\Scripts\testclick.cs" Line="7" Column="2" />
+      <File FileName="Assets\uiTest.cs" Line="21" Column="53" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
