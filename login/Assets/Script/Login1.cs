@@ -14,18 +14,82 @@ public class Login1 : MonoBehaviour
     public InputField inputName;
     public InputField inputPasswd;
 
-    public void OnClick()
+    private string url = "http://localhost:3000/";
+
+    public void userRegeste()
     {
-        if (inputName.text.Trim() == "liwei" && inputPasswd.text.Trim() == "admin")
+        if (inputName.text.Trim() != "" && inputPasswd.text.Trim() != "")
         {
-            Debug.Log("登录成功");
+            this.TestHttpSend("register");
+            
         }
         else
         {
-            Debug.Log("登录失败");
+            Debug.Log("请输入用户名或者密码");
         }
 
     }
+    public void userLogin()
+    {
+        if (inputName.text.Trim() != "" && inputPasswd.text.Trim() != "")
+        {
+            this.TestHttpSendGet("login", inputName.text, inputPasswd.text); //get 
+
+        }
+        else
+        {
+            Debug.Log("请输入用户名或者密码");
+        }
+
+    }
+
+    //get方法
+    IEnumerator SendGet(string _url)
+    {
+        WWW getData = new WWW(_url);
+        yield return getData;
+        if (getData.error != null)
+        {
+            Debug.Log(getData.error);
+        }
+        else
+        {
+            Debug.Log(getData.text);
+        }
+    }
+
+    //post 方法
+    IEnumerator SendPost(string _url, WWWForm _wForm)
+    {
+        WWW postData = new WWW(_url, _wForm);
+        yield return postData;
+        if (postData.error != null)
+        {
+            Debug.Log(postData.error);
+        }
+        else
+        {
+            Debug.Log(postData.text);
+        }
+    }
+
+
+    //调用get 
+    public void TestHttpSendGet(string type,string userName,string passWord)
+    {
+        Debug.Log(url +type+ "?userName="+userName+"&passWord="+passWord);
+        StartCoroutine(SendGet(url + type + "?userName=" + userName + "&passWord=" + passWord));
+    }
+    //调用post
+    public void TestHttpSend(string type)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("userName", inputName.text);
+        form.AddField("passWord", inputPasswd.text);
+        StartCoroutine(SendPost(url + type, form));
+    }
+
+
 
     // Use this for initialization
     void Start()
@@ -40,7 +104,8 @@ public class Login1 : MonoBehaviour
         if(remPasswd.isOn)
         {
             //填充数据，这里仅仅是模拟
-            inputPasswd.text = "admin";
+            //inputPasswd.text = "admin";
+            inputPasswd.text = inputPasswd.text;
         }
         else
         {
@@ -48,18 +113,6 @@ public class Login1 : MonoBehaviour
         }
     }
 
-    void regist()
-    { 
-        //如果可以直接将数据写入数据库，这里我们仅仅是模拟
-        if (inputName.text != "" && inputPasswd.text != "")
-        {
-            Debug.Log("注册成功");
-        }
-        else
-        {
-            Debug.Log("请输入注册信息");
-        }
-    
-    }
+  
 
 }

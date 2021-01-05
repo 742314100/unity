@@ -30,6 +30,8 @@ public class main : MonoBehaviour {
 
     }
 
+   
+
     //post 方法
 
     //IEnumerator ToPost()

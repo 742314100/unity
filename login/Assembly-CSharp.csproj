@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Script\Login1.cs" />
-     <Compile Include="Assets\Script\SqlAccess.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/soft/Unity5.5/unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -66,26 +65,26 @@
  <Reference Include="UnityEngine.VR">
  <HintPath>D:/soft/Unity5.5/unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
- <Reference Include="System.Data">
- <HintPath>D:/learn/unity/login/Assets/Plugins/System.Data.dll</HintPath>
- </Reference>
- <Reference Include="MySql.Data">
- <HintPath>D:/learn/unity/login/Assets/Plugins/MySql.Data.dll</HintPath>
- </Reference>
  <Reference Include="I18N.CJK">
  <HintPath>D:/learn/unity/login/Assets/Plugins/I18N.CJK.dll</HintPath>
- </Reference>
- <Reference Include="Mono.Data.SqliteClient">
- <HintPath>D:/learn/unity/login/Assets/Plugins/Mono.Data.SqliteClient.dll</HintPath>
- </Reference>
- <Reference Include="System.Drawing">
- <HintPath>D:/learn/unity/login/Assets/Plugins/System.Drawing.dll</HintPath>
  </Reference>
  <Reference Include="I18N">
  <HintPath>D:/learn/unity/login/Assets/Plugins/I18N.dll</HintPath>
  </Reference>
  <Reference Include="I18N.West">
  <HintPath>D:/learn/unity/login/Assets/Plugins/I18N.West.dll</HintPath>
+ </Reference>
+ <Reference Include="Mono.Data.SqliteClient">
+ <HintPath>D:/learn/unity/login/Assets/Plugins/Mono.Data.SqliteClient.dll</HintPath>
+ </Reference>
+ <Reference Include="MySql.Data">
+ <HintPath>D:/learn/unity/login/Assets/Plugins/MySql.Data.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Data">
+ <HintPath>D:/learn/unity/login/Assets/Plugins/System.Data.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Drawing">
+ <HintPath>D:/learn/unity/login/Assets/Plugins/System.Drawing.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
