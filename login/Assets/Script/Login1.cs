@@ -50,11 +50,14 @@ public class Login1 : MonoBehaviour
         yield return getData;
         if (getData.error != null)
         {
-            Debug.Log(getData.error);
+            Debug.Log("登录失败：" + getData.error);
         }
         else
         {
-            Debug.Log(getData.text);
+            Debug.Log("登录成功：" + getData.text);
+            AsyncOperation async = Application.LoadLevelAsync("main");
+            yield return async;
+            Debug.Log("进入主页成功");
         }
     }
 
@@ -65,11 +68,11 @@ public class Login1 : MonoBehaviour
         yield return postData;
         if (postData.error != null)
         {
-            Debug.Log(postData.error);
+            Debug.Log("注册失败："+postData.error);
         }
         else
         {
-            Debug.Log(postData.text);
+            Debug.Log("注册成功："+postData.text);
         }
     }
 
