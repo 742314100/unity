@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\IdCard.cs" />
      <Compile Include="Assets\Script\Login1.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/soft/Unity5.5/unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
